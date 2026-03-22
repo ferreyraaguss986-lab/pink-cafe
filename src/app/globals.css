@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #EC4899;
+  --color-secondary: #F472B6;
+  --color-accent: #FBCFE8;
+  --color-pink-bg: #FFF1F5;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-montserrat: var(--font-montserrat);
+  --font-sacramento: var(--font-sacramento);
+
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 3rem;
+
+  --shadow-soft: 0 10px 30px -10px rgba(236, 72, 153, 0.15);
+  --shadow-premium: 0 20px 50px -12px rgba(236, 72, 153, 0.2);
+}
+
+:root {
+  --background: #FFF1F5;
+  --foreground: #1F2937;
+}
+
+/* ── Cursor ─────────────────────────────────────────────── */
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Custom organic shapes and curves */
+.curve-divider {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background: var(--background);
+}
+
+/* ── Scrollbar hide utility ─────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Floating icon keyframes (replaces framer-motion) ──── */
+@keyframes floatA {
+  0%   { transform: translate(0, 0) rotate(0deg);   opacity: 0.3; }
+  50%  { transform: translate(18px, -35px) rotate(180deg); opacity: 0.55; }
+  100% { transform: translate(0, 0) rotate(360deg); opacity: 0.3; }
+}
+@keyframes floatB {
+  0%   { transform: translate(0, 0) rotate(0deg);   opacity: 0.25; }
+  50%  { transform: translate(-20px, -28px) rotate(-180deg); opacity: 0.5; }
+  100% { transform: translate(0, 0) rotate(-360deg); opacity: 0.25; }
+}
+@keyframes floatC {
+  0%   { transform: translate(0, 0) rotate(0deg);   opacity: 0.3; }
+  33%  { transform: translate(12px, -20px) rotate(120deg); opacity: 0.5; }
+  66%  { transform: translate(-8px, -40px) rotate(240deg); opacity: 0.35; }
+  100% { transform: translate(0, 0) rotate(360deg); opacity: 0.3; }
+}
+.float-a { animation: floatA var(--dur, 20s) var(--delay, 0s) infinite ease-in-out; }
+.float-b { animation: floatB var(--dur, 22s) var(--delay, 0s) infinite ease-in-out; }
+.float-c { animation: floatC var(--dur, 25s) var(--delay, 0s) infinite ease-in-out; }
+
