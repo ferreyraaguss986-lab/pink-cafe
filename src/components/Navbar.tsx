@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Carta", href: "/carta" },
   { name: "Ubicación", href: "/ubicacion" },
   { name: "Contacto", href: "/contacto" },
+  { name: "Trabajo", href: "/trabajo" },
 ];
 
 export default function Navbar() {

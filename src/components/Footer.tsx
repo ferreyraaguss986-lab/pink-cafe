@@ -70,6 +70,7 @@ export default function Footer() {
               <li><Link href="/carta" className="hover:text-primary transition-colors">Carta</Link></li>
               <li><Link href="/ubicacion" className="hover:text-primary transition-colors">Ubicación</Link></li>
               <li><Link href="/contacto" className="hover:text-primary transition-colors">Contacto</Link></li>
+              <li><Link href="/trabajo" className="hover:text-primary transition-colors">Trabajá con nosotros</Link></li>
             </ul>
           </div>
 
