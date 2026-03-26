@@ -35,9 +35,18 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/inicio" className="flex items-center gap-2 group">
-          <span className={`text-3xl md:text-4xl font-bold transition-all duration-500 drop-shadow-sm ${scrolled ? 'text-primary' : 'text-[#FFFDF0]'}`}>
+          <span className={`hidden md:block text-3xl md:text-4xl font-bold transition-all duration-500 drop-shadow-sm ${scrolled ? 'text-primary' : 'text-[#FFFDF0]'}`}>
             𝗣𝗜𝗡𝗞 𝒞𝒶𝒻𝑒́
           </span>
+          <div className="md:hidden flex items-center">
+            <Image 
+              src="/PinkCafelogo.png" 
+              alt="Pink Café" 
+              width={140} 
+              height={40} 
+              className={`w-auto h-10 transition-all duration-500 ${scrolled ? '' : 'brightness-0 invert'}`} 
+            />
+          </div>
         </Link>
 
         {/* Desktop Menu */}

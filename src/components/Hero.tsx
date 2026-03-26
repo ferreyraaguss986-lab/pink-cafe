@@ -45,6 +45,7 @@ export default function Hero({
               alt="Background"
               fill
               className="object-cover"
+              sizes="100vw"
               priority
             />
             <div className="absolute inset-0 bg-pink-bg/40 backdrop-blur-[2px] z-10" />
@@ -99,9 +100,14 @@ export default function Hero({
           </motion.span>
           <h1 className={`${centered ? 'mb-10' : 'mb-6'} leading-tight ${backgroundImg ? 'drop-shadow-sm' : ''}`}>
             {title === "Pink Café" ? (
-              <div className={`text-6xl md:text-9xl text-[#FFFDF0] font-bold drop-shadow-lg tracking-tight`}>
-                𝗣𝗜𝗡𝗞 𝒞𝒶𝒻𝑒́
-              </div>
+              <>
+                <div className={`hidden md:block text-6xl md:text-9xl text-[#FFFDF0] font-bold drop-shadow-lg tracking-tight`}>
+                  𝗣𝗜𝗡𝗞 𝒞𝒶𝒻𝑒́
+                </div>
+                <div className={`md:hidden flex ${centered ? 'justify-center' : 'justify-start'}`}>
+                  <Image src="/PinkCafelogo.png" alt="Pink Café Logo" width={280} height={80} className="w-auto h-16 sm:h-20 drop-shadow-lg" priority />
+                </div>
+              </>
             ) : (
               <span className="font-serif text-4xl md:text-6xl text-foreground block">{title}</span>
             )}
@@ -141,6 +147,7 @@ export default function Hero({
                 width={600}
                 height={700}
                 className="w-full h-[500px] md:h-[600px] object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
             </div>
@@ -149,7 +156,7 @@ export default function Hero({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className="absolute -bottom-6 -left-6 md:-left-12 glass p-6 rounded-2xl shadow-soft max-w-[200px] z-20"
+              className="absolute -bottom-2 md:-bottom-6 -left-2 md:-left-12 glass p-4 md:p-6 rounded-2xl shadow-soft max-w-[180px] md:max-w-[200px] z-30"
             >
               <p className="text-sm font-serif text-primary italic mb-1">Aesthetic Spot</p>
               <p className="text-xs text-foreground/60 leading-tight">El lugar más instagrameable de Córdoba para merendar.</p>

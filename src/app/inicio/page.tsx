@@ -1,9 +1,11 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
-import Experiences from "@/components/Experiences";
-import CeramicSection from "@/components/CeramicSection";
-import Gallery from "@/components/Gallery";
-import Testimonials from "@/components/Testimonials";
 import OpenStatus from "@/components/OpenStatus";
+
+const Experiences = dynamic(() => import("@/components/Experiences"));
+const CeramicSection = dynamic(() => import("@/components/CeramicSection"));
+const Gallery = dynamic(() => import("@/components/Gallery"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
 
 export default function InicioPage() {
   return (
