@@ -40,11 +40,11 @@ export default function Navbar() {
           </span>
           <div className="md:hidden flex items-center">
             <Image 
-              src="/PinkCafelogo.png" 
+              src={scrolled ? "/PinkCafe logo rosa.png" : "/PinkCafelogo.png"} 
               alt="Pink Café" 
-              width={140} 
-              height={40} 
-              className={`w-auto h-10 transition-all duration-500 ${scrolled ? '' : 'brightness-0 invert'}`} 
+              width={240} 
+              height={80} 
+              className="w-auto h-16 sm:h-20 transition-all duration-500 pt-1 scale-[1.8] origin-left drop-shadow-sm" 
             />
           </div>
         </Link>

@@ -93,21 +93,23 @@ export default function Hero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className={`flex items-center gap-2 font-medium tracking-wider mb-4 uppercase text-sm ${backgroundImg ? 'text-primary bg-white/80 px-4 py-1 rounded-full backdrop-blur-md shadow-sm' : 'text-primary'}`}
+            className={`flex items-center gap-2 font-medium tracking-wider mb-2 uppercase text-sm ${backgroundImg ? 'text-primary bg-white/80 px-4 py-1 rounded-full backdrop-blur-md shadow-sm' : 'text-primary'}`}
           >
             <Coffee size={18} className="text-primary/60" />
             Viví la experiencia Pink
           </motion.span>
-          <h1 className={`${centered ? 'mb-10' : 'mb-6'} leading-tight ${backgroundImg ? 'drop-shadow-sm' : ''}`}>
+          <h1 className={`flex ${centered ? 'justify-center mb-6' : 'justify-start mb-4'} leading-tight ${backgroundImg ? 'drop-shadow-sm' : ''}`}>
             {title === "Pink Café" ? (
-              <>
-                <div className={`hidden md:block text-6xl md:text-9xl text-[#FFFDF0] font-bold drop-shadow-lg tracking-tight`}>
-                  𝗣𝗜𝗡𝗞 𝒞𝒶𝒻𝑒́
-                </div>
-                <div className={`md:hidden flex ${centered ? 'justify-center' : 'justify-start'}`}>
-                  <Image src="/PinkCafelogo.png" alt="Pink Café Logo" width={280} height={80} className="w-auto h-16 sm:h-20 drop-shadow-lg" priority />
-                </div>
-              </>
+              <div className={`flex items-center ${centered ? 'justify-center' : 'justify-start'} w-full`}>
+                <Image 
+                  src="/PinkCafelogo.png" 
+                  alt="Pink Café Logo" 
+                  width={800} 
+                  height={300} 
+                  className="w-[280px] sm:w-[320px] md:w-[400px] lg:w-[500px] h-auto object-contain drop-shadow-lg scale-[1.8] origin-center mt-4" 
+                  priority 
+                />
+              </div>
             ) : (
               <span className="font-serif text-4xl md:text-6xl text-foreground block">{title}</span>
             )}
@@ -156,7 +158,7 @@ export default function Hero({
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
-              className="absolute -bottom-2 md:-bottom-6 -left-2 md:-left-12 glass p-4 md:p-6 rounded-2xl shadow-soft max-w-[180px] md:max-w-[200px] z-30"
+              className="absolute bottom-20 md:bottom-24 -left-2 md:-left-12 glass p-4 md:p-6 rounded-2xl shadow-soft max-w-[180px] md:max-w-[200px] z-30"
             >
               <p className="text-sm font-serif text-primary italic mb-1">Aesthetic Spot</p>
               <p className="text-xs text-foreground/60 leading-tight">El lugar más instagrameable de Córdoba para merendar.</p>
