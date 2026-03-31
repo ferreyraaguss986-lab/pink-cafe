@@ -36,7 +36,7 @@ export default function CeramicSection() {
           >
             <div className="rounded-[3rem] overflow-hidden shadow-premium aspect-square md:aspect-video lg:aspect-square relative">
               <Image
-                src="/art.png"
+                src="/IMG_2486.JPEG"
                 alt="Ceramic Painting Experience"
                 fill
                 className="object-cover"

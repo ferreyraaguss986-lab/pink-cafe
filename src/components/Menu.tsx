@@ -16,22 +16,20 @@ import {
   Beer,
 } from "lucide-react";
 
+// ─── IMAGE BASE PATH ─────────────────────────────────────────────────────────
+
+const P = "/IMAGENES%20DE%20MENU%20PINKCAFE";
+
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const categories = [
   {
     id: "especiales",
-    label: "Especiales",
+    label: "Especiales de la Semana",
     icon: Star,
     color: "from-pink-400 to-rose-400",
     items: [
-      {
-        name: "Café + 2 Medialunas de Manteca",
-        description:
-          "Café a elección de la carta, más dos medialunas de manteca. No aplica otros descuentos.",
-        price: 10000,
-        tag: "Especial de la semana",
-      },
+      { name: "Cafe + 2 Medialunas de Manteca", description: "Café a elección + 2 medialunas", price: 10000, tag: "Especial", image: `${P}/%24image.png` },
     ],
   },
   {
@@ -40,105 +38,23 @@ const categories = [
     icon: Coffee,
     color: "from-rose-300 to-pink-400",
     items: [
-      {
-        name: "Café Coquette",
-        description:
-          "Café con leche rosa texturizada, glitter, pétalos de rosa, Nutella y perlas comestibles de chocolate.",
-        price: 7500,
-        tag: "Signature",
-      },
-      {
-        name: "Ice Coffee Pink",
-        description:
-          "Syrup de frambuesa, shot de café, leche rosa texturizada. Copa decorada con Nutella y granas de azúcar.",
-        price: 7500,
-        tag: "Pink",
-      },
-      {
-        name: "Café con Leche Pink",
-        description: "Shot de café con leche rosa texturizada y glitter.",
-        price: 6800,
-      },
-      {
-        name: "Lágrima Pink en Taza",
-        description:
-          "Leche rosa texturizada con un touch de café y glitter.",
-        price: 6800,
-      },
-      {
-        name: "Submarino Pink",
-        description:
-          "Leche rosa con barra de chocolate Águila blanco y brillitos.",
-        price: 7000,
-      },
-      {
-        name: "Submarino Black",
-        description:
-          "Leche con barra de chocolate Águila semi amargo y glitter.",
-        price: 7000,
-      },
-      {
-        name: "Frappuccino de Pistachos",
-        description:
-          "Syrup de pistacho, shot de café, leche texturizada. Copa coronada con Nutella de pistachos y trozos de pistachos tostados.",
-        price: 7200,
-        tag: "Favorito",
-      },
-      {
-        name: "Latte Lemon Pie",
-        description:
-          "Shot de espresso, leche texturizada, pasta lemon pie crunch.",
-        price: 7000,
-      },
-      {
-        name: "Capuchino de Avellanas",
-        description:
-          "Syrup de avellanas, shot de café, leche texturizada, coronado con salsa de caramelo y/o chocolate.",
-        price: 7000,
-      },
-      {
-        name: "Capuchino de Toffee Caramel",
-        description:
-          "Syrup de caramelo, shot de café, leche texturizada, coronado con salsa de caramelo y/o chocolate.",
-        price: 7000,
-      },
-      {
-        name: "Capuchino de Vainilla",
-        description:
-          "Syrup de vainilla, shot de café, leche texturizada, coronado con salsa de caramelo y/o chocolate.",
-        price: 7000,
-      },
-      {
-        name: "Ice Coffee Tonic",
-        description:
-          "Shot de café + agua tónica + cubitos de hielo + rodaja de naranja.",
-        price: 7000,
-      },
-      {
-        name: "Ice Latte Coffee",
-        description: "Shot de café + leche fría + cubitos de hielo.",
-        price: 7000,
-      },
-      {
-        name: "Café con Leche",
-        description: "50% leche, 50% café.",
-        price: 6000,
-      },
-      {
-        name: "Lágrima en Taza",
-        description: "Más leche que café.",
-        price: 6000,
-      },
-      {
-        name: "Café Doble",
-        description: "Dos shots de café espresso.",
-        price: 5000,
-      },
-      {
-        name: "Cortado en Taza",
-        description: "Café con apenas leche en taza.",
-        price: 5000,
-      },
+      { name: "Cafe Coquette", description: "Café con leche rosa, glitter, pétalos, Nutella y perlas", price: 7500, tag: "Signature", image: `${P}/dot-image.png` },
+      { name: "Ice Coffee Pink", description: "Café, leche rosa, frambuesa, Nutella", price: 7500, tag: "Pink", image: `${P}/dot-image%20(1).png` },
+      { name: "Cafe con Leche Pink", description: "Café con leche rosa y glitter", price: 6800, image: `${P}/dot-image%20(2).png` },
+      { name: "Lagrima Pink en Taza", description: "Leche rosa con toque de café", price: 6800, image: `${P}/dot-image%20(3).png` },
+      { name: "Submarino Pink", description: "Leche rosa + chocolate blanco Águila", price: 7000, image: `${P}/dot-image%20(4).png` },
+      { name: "Submarino Black", description: "Leche + chocolate Águila semiamargo", price: 7000, image: `${P}/dot-image%20(5).png` },
+      { name: "Frapuccino de Pistachos", description: "Café, leche, pistacho, Nutella de pistacho", price: 7200, tag: "Favorito", image: `${P}/dot-image%20(6).png` },
+      { name: "Latte Lemon Pie", description: "Café, leche y pasta lemon pie", price: 7000, image: `${P}/dot-image%20(7).png` },
+      { name: "Capuchino de Avellanas", description: "Café, leche, avellanas, salsa", price: 7000, image: `${P}/dot-image%20(8).png` },
+      { name: "Capuchino de Toffe Caramel", description: "Café, leche, caramelo", price: 7000, image: `${P}/dot-image%20(9).png` },
+      { name: "Capuchino de Vainilla", description: "Café, leche, vainilla", price: 7000, image: `${P}/dot-image%20(10).png` },
+      { name: "Ice Coffee Tonic", description: "Café + tónica + naranja", price: 7000, image: `${P}/dot-image%20(11).png` },
+      { name: "Ice Latte Coffee", description: "Café + leche fría", price: 7000, image: `${P}/dot-image%20(12).png` },
+      { name: "Cafe con Leche", description: "Mitad café, mitad leche", price: 6000, image: `${P}/dot-image%20(13).png` },
+      { name: "Lagrima en Taza", description: "Más leche que café", price: 6000, image: `${P}/dot-image%20(14).png` },
+      { name: "Cafe Doble", description: "Doble espresso", price: 5000, image: `${P}/dot-image%20(15).png` },
+      { name: "Cortado en Taza", description: "Café con poca leche", price: 5000, image: `${P}/dot-image%20(16).png` },
     ],
   },
   {
@@ -147,27 +63,9 @@ const categories = [
     icon: Leaf,
     color: "from-emerald-300 to-teal-400",
     items: [
-      {
-        name: "Té Negro English Breakfast",
-        description:
-          "Té English Breakfast importado de Assam (India) y Rwanda.",
-        price: 5000,
-        tag: "Importado",
-      },
-      {
-        name: "Vainilla Sky",
-        description:
-          "Perfumada elegancia de vainilla y flores de jazmín. Con trozos de frutilla, té verde y bellas agujas de plata del té blanco de Yunnan.",
-        price: 5000,
-        tag: "Importado",
-      },
-      {
-        name: "Chai on Fire",
-        description:
-          "Explosivo Chai de té negro, cúrcuma, canela, jengibre, anís, pimienta negra y chilli picante.",
-        price: 5000,
-        tag: "Importado",
-      },
+      { name: "Te Negro English Breakfast", description: "Té importado", price: 5000, tag: "Importado", image: `${P}/dot-image%20(17).png` },
+      { name: "Vainilla Sky", description: "Té verde/blanco con vainilla y frutas", price: 5000, tag: "Importado", image: `${P}/dot-image%20(18).png` },
+      { name: "Chai on Fire", description: "Chai especiado picante", price: 5000, tag: "Importado", image: `${P}/dot-image%20(19).png` },
     ],
   },
   {
@@ -176,47 +74,17 @@ const categories = [
     icon: Cake,
     color: "from-fuchsia-300 to-pink-400",
     items: [
-      {
-        name: "Rainbow Pride Cake",
-        description:
-          "Bizcochuelo húmedo arcoiris con 6 colores, relleno con ganache de chocolate blanco y jalea de maracuyá, cubierta con buttercream de merengue suizo.",
-        price: 12500,
-        tag: "Especial",
-      },
-      {
-        name: "Matilda",
-        description:
-          "Bizcochuelo de chocolate con dulce de leche y ganache de cacao, coronado con ganache de chocolate y trufas de cacao y coco.",
-        price: 13000,
-        tag: "Favorita",
-      },
-      {
-        name: "Pink Velvet",
-        description:
-          "Nuestra reversión de la Red Velvet, rellena de ganache de chocolate blanco y reducción de frambuesa, cubierta con buttercream de merengue suizo rosa y perlas.",
-        price: 13000,
-        tag: "Signature",
-      },
-      {
-        name: "Key Lime Pie",
-        description:
-          "Base de galleta de vainilla, crema de lima, decorado con crema chantilly, granada y ralladura de lima.",
-        price: 11000,
-      },
-      {
-        name: "Mini Cake Banana, Granizada y Marroc",
-        description:
-          "Bizcochuelo de banana y chocolate con ganache de chocolate blanco y maní, cubierta de frosting de cacao y pralinè de maní.",
-        price: 15000,
-        tag: "Premium",
-      },
-      {
-        name: "Cheesecake Vasco Dubai de Pistachos",
-        description:
-          "Cheesecake estilo vasco (sin base de galletas, solo queso y crema horneada) con crema de pistachos y kadaif. ¡Una delicia!",
-        price: 13500,
-        tag: "Estrella",
-      },
+      { name: "Rainbow Pride Cake", description: "Bizcochuelo arcoiris + ganache", price: 13500, tag: "Especial", image: `${P}/dot-image%20(20).png` },
+      { name: "Cheesecake (Frutos rojos / Maracuyá)", description: "Cheesecake NY", price: 13000, image: `${P}/dot-image%20(21).png` },
+      { name: "Matilda", description: "Torta chocolate + dulce de leche", price: 13000, tag: "Favorita", image: `${P}/dot-image%20(22).png` },
+      { name: "Pink Velvet", description: "Red velvet versión rosa", price: 13000, tag: "Signature", image: `${P}/dot-image%20(23).png` },
+      { name: "Torta de la Pasión", description: "Chocolate + maracuyá", price: 10000, tag: "Sin TACC", image: `${P}/dot-image%20(24).png` },
+      { name: "Key Lime Pie", description: "Tarta de lima", price: 11000, image: `${P}/image.png` },
+      { name: "Mini Cake Banana Granizada y Marroc", description: "Banana + chocolate + maní", price: 15000, tag: "Premium", image: `${P}/image%20(1).png` },
+      { name: "Mini Cake Pink", description: "Limón + frutilla", price: 15000, tag: "Signature", image: `${P}/image%20(2).png` },
+      { name: "Torta Cookie Mani, Pistachos y Frambuesa", description: "Cookie + cremas", price: 13500, image: `${P}/image%20(3).png` },
+      { name: "Cheesecake Vasco Dubai de Pistachos", description: "Cheesecake con pistacho", price: 13500, tag: "Estrella", image: `${P}/image%20(4).png` },
+      { name: "Rogel Primaveral", description: "Capas con dulce de leche", price: 9500, image: `${P}/image%20(5).png` },
     ],
   },
   {
@@ -225,49 +93,13 @@ const categories = [
     icon: Sparkles,
     color: "from-pink-300 to-fuchsia-400",
     items: [
-      {
-        name: "Cookie de Nutella y Pralinè de Avellanas",
-        description:
-          "Cookie de cacao, rellena de Nutella y decorada con garrapiñada de avellanas.",
-        price: 7500,
-      },
-      {
-        name: "Cookie Red Velvet",
-        description:
-          "Cookie de vainilla y cacao suave, con centro de ganache de queso crema, decorado con ganache de chocolate blanco, frambuesas y frutillas deshidratadas. Moño de chocolate blanco.",
-        price: 7500,
-      },
-      {
-        name: "Budín Carrot Cake Pink",
-        description:
-          "Abundante porción de budín de zanahoria con nueces, cubierta con frosting rosa de queso crema y pralinè de almendras.",
-        price: 7800,
-      },
-      {
-        name: "Budín de Limón y Arándanos Amapola",
-        description: "",
-        price: 7800,
-      },
-      {
-        name: "Budín de Naranja y Frutos del Bosque",
-        description:
-          "Budín de naranja con frutos del bosque, cubierto de glaseado rosa de naranja.",
-        price: 7800,
-      },
-      {
-        name: "Alfajor Pink — Frutos Rojos y Rosas",
-        description:
-          "Alfajor de limón relleno de dulce de leche y reducción de frutos rojos, bañado con chocolate blanco y pétalos de rosas.",
-        price: 8500,
-        tag: "Sin TACC",
-      },
-      {
-        name: "Alfajor Choco Café y Toffee",
-        description:
-          "Alfajor de chocolate, relleno con ganache de chocolate y café y centro de caramelo toffee, bañado en chocolate, coco y sal en escamas.",
-        price: 8500,
-        tag: "Sin TACC",
-      },
+      { name: "Cookie Nutella y Praline de Avellanas", description: "", price: 7500, image: `${P}/image%20(6).png` },
+      { name: "Cookie Red Velvet", description: "", price: 7500, image: `${P}/image%20(7).png` },
+      { name: "Budin Carrot Cake Pink", description: "", price: 7800, image: `${P}/image%20(8).png` },
+      { name: "Budín Limón y Arándanos Amapola", description: "", price: 7800, image: `${P}/image%20(9).png` },
+      { name: "Budín Chocolatoso", description: "", price: 7800, tag: "Vegano", image: `${P}/image%20(10).png` },
+      { name: "Budín Naranja y Frutos del Bosque", description: "", price: 7800, image: `${P}/image%20(11).png` },
+      { name: "Alfajor Choco Cafe y Toffee", description: "", price: 8500, tag: "Sin TACC", image: `${P}/image%20(12).png` },
     ],
   },
   {
@@ -276,38 +108,13 @@ const categories = [
     icon: UtensilsCrossed,
     color: "from-amber-300 to-orange-400",
     items: [
-      {
-        name: "Tostado de Jamón y Queso",
-        description:
-          "Sándwich de ciabatta de masa madre propia, con queso Tybo y jamón cocido natural. Acompañado de nachos y dip untable.",
-        price: 12000,
-      },
-      {
-        name: "Tostón Mediterráneo",
-        description:
-          "Pan de campo de masa madre propio, queso crema, rúcula, cherrys, jamón crudo, aceite de oliva y queso en hebras. Con nachos y dip untable.",
-        price: 13700,
-      },
-      {
-        name: "Tostón de Girgolas",
-        description:
-          "Tostón con pan de masa madre y semillas propio, cremoso de zapallo, rúcula fresca con vinagreta de naranja, girgolas marinadas en curry, semillas de zapallo con salsa de soja, microgreens, pétalos y dip de hummus de remolacha con sésamo.",
-        price: 12500,
-        tag: "Vegano",
-      },
-      {
-        name: "Chipa Casero",
-        description:
-          "Chipa con blend de quesos Sardo y Pategras. Una unidad de 120 gr.",
-        price: 4500,
-      },
-      {
-        name: "Sándwich de Berenjena",
-        description:
-          "Sándwich de ciabatta de masa madre propia, hummus de remolacha, lechuga fresca, escabeche de berenjena, pickles de cebolla morada y tomates asados. Con nachos y dip de zanahoria.",
-        price: 11500,
-        tag: "Vegano",
-      },
+      { name: "Tostado de Jamon y Queso", description: "", price: 14000, image: `${P}/image%20(13).png` },
+      { name: "Toston Mediterraneo", description: "", price: 13700, image: `${P}/image%20(14).png` },
+      { name: "Toston de Girgolas", description: "", price: 12500, tag: "Vegano", image: `${P}/image%20(15).png` },
+      { name: "Sandwich de Chipa Prensado", description: "", price: 14000, tag: "Sin TACC", image: `${P}/image%20(16).png` },
+      { name: "Chipa Casero", description: "", price: 4500, image: `${P}/image%20(17).png` },
+      { name: "Sandwich de Focaccia", description: "", price: 15000, image: `${P}/image%20(18).png` },
+      { name: "Sandwich de Berenjena", description: "", price: 11500, tag: "Vegano", image: `${P}/image%20(19).png` },
     ],
   },
   {
@@ -316,20 +123,8 @@ const categories = [
     icon: Heart,
     color: "from-rose-400 to-pink-500",
     items: [
-      {
-        name: "Combo Proteico",
-        description:
-          "Queso Tybo + jamón cocido + 2 huevos revueltos + dip de queso crema + dip de palta + 2 rebanadas de pan de masa madre + soda + bebida a elección (infusión, café doble, cortado, café con leche, gaseosa o agua saborizada).",
-        price: 18500,
-        tag: "Completo",
-      },
-      {
-        name: "Combo Vegano",
-        description:
-          "Cherrys + champis + palta + emulsión de zanahoria y cebolla asada + 2 rebanadas de pan de masa madre + soda + bebida a elección (infusión, café doble, cortado, café con leche, gaseosa o agua saborizada).",
-        price: 16500,
-        tag: "Vegano",
-      },
+      { name: "Combo Proteico", description: "", price: 18500, tag: "Completo", image: `${P}/image%20(20).png` },
+      { name: "Combo Vegano", description: "", price: 16500, tag: "Vegano", image: `${P}/image%20(21).png` },
     ],
   },
   {
@@ -338,125 +133,62 @@ const categories = [
     icon: GlassWater,
     color: "from-pink-300 to-fuchsia-300",
     items: [
-      {
-        name: "Smoothie Banana",
-        description: "Licuado de banana con leche.",
-        price: 8500,
-      },
-      {
-        name: "Smoothie Passion Tropical",
-        description:
-          "Licuado de fruta natural de durazno, maracuyá y mango al agua.",
-        price: 8500,
-      },
-      {
-        name: "Smoothie Passion Tropical con Leche",
-        description:
-          "Licuado de fruta natural de durazno, maracuyá y mango con leche de vaca.",
-        price: 8700,
-      },
-      {
-        name: "Smoothie Diosa del Bosque",
-        description:
-          "Licuado de fruta natural de frutilla, arándanos, frambuesa y moras al agua.",
-        price: 8500,
-      },
-      {
-        name: "Smoothie Diosa del Bosque con Leche",
-        description:
-          "Licuado de fruta natural de frutilla, arándanos, frambuesa y moras con leche de vaca.",
-        price: 8700,
-      },
-      {
-        name: "Limonada Frutos Rojos — 1.5 L",
-        description:
-          "Jarra de 1.5 L con jugo natural de limón, frutillas, arándanos y moras.",
-        price: 15000,
-        tag: "Jarra",
-      },
-      {
-        name: "Limonada de Menta y Jengibre — 1.5 L",
-        description:
-          "Jarra de 1.5 L con jugo natural de limón, menta y jengibre.",
-        price: 13500,
-        tag: "Jarra",
-      },
-      {
-        name: "Limonada de Maracuyá — 1.5 L",
-        description:
-          "Jarra de 1.5 L con jugo natural de limón y maracuyá.",
-        price: 16000,
-        tag: "Jarra",
-      },
-      {
-        name: "Ice Tea Grapefruit",
-        description:
-          "Té helado de hebras importadas (té ceylon, trozos de manzana, pera, cubitos de piña, rosa mosqueta, canela, pétalos de girasol) con jugo exprimido de pomelo.",
-        price: 7500,
-      },
+      { name: "Smoothie Banana", description: "", price: 8500, image: `${P}/image%20(22).png` },
+      { name: "Smoothie Passion Tropical", description: "", price: 8500, image: `${P}/image%20(23).png` },
+      { name: "Smoothie Passion Tropical con Leche", description: "", price: 8700, image: `${P}/image%20(24).png` },
+      { name: "Smoothie Diosa del Bosque", description: "", price: 8500, image: `${P}/image%20(25).png` },
+      { name: "Smoothie Diosa del Bosque con Leche", description: "", price: 8700, image: `${P}/image%20(26).png` },
+      { name: "Limonada Frutos Rojos 1.5L", description: "", price: 15000, tag: "Jarra", image: `${P}/image%20(27).png` },
+      { name: "Limonada Menta y Jengibre 1.5L", description: "", price: 13500, tag: "Jarra", image: `${P}/image%20(28).png` },
+      { name: "Limonada Maracuya 1.5L", description: "", price: 16000, tag: "Jarra", image: `${P}/image%20(29).png` },
+      { name: "Jugo de Naranja Exprimido", description: "", price: 9000, image: `${P}/image%20(30).png` },
+    ],
+  },
+  {
+    id: "icetea",
+    label: "Ice Tea",
+    icon: GlassWater,
+    color: "from-teal-300 to-emerald-400",
+    items: [
+      { name: "Ice Tea Grapefruit", description: "", price: 7500, image: `${P}/image%20(31).png` },
     ],
   },
   {
     id: "ceramica",
-    label: "Art & Coffee",
+    label: "Experiencia Art & Coffee",
     icon: Sparkles,
     color: "from-violet-300 to-fuchsia-400",
     items: [
-      {
-        name: "Pieza Chica",
-        description:
-          "Incluye la pieza de cerámica, acrílicos de primera calidad, pinceles y todo lo necesario para pintar y llevarte lista tu pieza.",
-        price: 12500,
-      },
-      {
-        name: "Pieza Grande",
-        description:
-          "Incluye la pieza de cerámica, acrílicos de primera calidad, pinceles y todo lo necesario para pintar y llevarte lista tu pieza.",
-        price: 15000,
-      },
-      {
-        name: "Pieza XL",
-        description:
-          "Incluye la pieza de cerámica, acrílicos de primera calidad, pinceles y todo lo necesario para pintar y llevarte lista tu pieza.",
-        price: 20000,
-      },
+      { name: "Pieza Chica", description: "", price: 12500, image: `${P}/image%20(32).png` },
+      { name: "Pieza Grande", description: "", price: 15000, image: `${P}/image%20(33).png` },
+      { name: "Pieza XL", description: "", price: 20000, image: `${P}/image%20(34).png` },
     ],
   },
   {
     id: "bebidas",
-    label: "Bebidas",
+    label: "Bebidas sin Alcohol",
     icon: GlassWater,
     color: "from-sky-300 to-blue-400",
     items: [
-      { name: "Agua sin Gas 500 ml", description: "", price: 3000 },
-      { name: "Agua con Gas 500 ml", description: "", price: 3000 },
-      {
-        name: "Jarra Agua Mineral con Hielo 1.5 L",
-        description: "Jarra de 1.5 L de agua mineral con hielo.",
-        price: 6000,
-      },
-      { name: "Coca Cola 354 ml", description: "", price: 3000 },
-      { name: "Sprite 357 ml", description: "", price: 3000 },
-      { name: "Fanta 354 ml", description: "", price: 3000 },
-      {
-        name: "Agua Saborizada 500 ml",
-        description: "Consultar sabores disponibles.",
-        price: 3000,
-      },
-      { name: "Schweppes Tónica 354 ml", description: "", price: 3000 },
-      { name: "Coca Cola Zero", description: "", price: 3000 },
+      { name: "Agua con Gas 500ml", description: "", price: 3000, image: `${P}/image%20(35).png` },
+      { name: "Jarra Agua Mineral 1.5L", description: "", price: 6000, tag: "Jarra", image: `${P}/image%20(36).png` },
+      { name: "Sprite 357ml", description: "", price: 3000, image: `${P}/image%20(37).png` },
+      { name: "Fanta 354ml", description: "", price: 3000, image: `${P}/image%20(38).png` },
+      { name: "Agua Saborizada 500ml", description: "", price: 3000, image: `${P}/image%20(39).png` },
+      { name: "Schweppes Tónica 354ml", description: "", price: 3000, image: `${P}/image%20(40).png` },
+      { name: "Coca Cola Zero", description: "", price: 3000, image: `${P}/image%20(41).png` },
     ],
   },
   {
     id: "alcohol",
-    label: "Con Alcohol",
+    label: "Bebidas con Alcohol",
     icon: Beer,
     color: "from-yellow-300 to-amber-400",
     items: [
-      { name: "Imperial Golden 473 ml", description: "", price: 6500 },
-      { name: "Imperial Lager 473 ml", description: "", price: 6500 },
-      { name: "Cerveza Chang Lata 350 ml", description: "", price: 9000 },
-      { name: "Imperial IPA 473 ml", description: "", price: 6500 },
+      { name: "Imperial Golden 473ml", description: "", price: 6500, image: `${P}/image%20(42).png` },
+      { name: "Imperial Lager 473ml", description: "", price: 6500, image: `${P}/image%20(43).png` },
+      { name: "Cerveza Chang 350ml", description: "", price: 9000, image: `${P}/image%20(44).png` },
+      { name: "Imperial IPA 473ml", description: "", price: 6500, image: `${P}/image%20(45).png` },
     ],
   },
   {
@@ -465,24 +197,18 @@ const categories = [
     icon: PawPrint,
     color: "from-orange-300 to-amber-400",
     items: [
-      {
-        name: "Snack Pet — Black Stix",
-        description:
-          "Tiritas de hígado deshidratado. Sin químicos ni harinas. Aptas para alimentación BARF.",
-        price: 5000,
-      },
-      {
-        name: "Snack Pet — White Stix",
-        description:
-          "Tiritas de mondongo deshidratado. Sin químicos ni harinas. Aptas para alimentación BARF.",
-        price: 5000,
-      },
-      {
-        name: "Snack Pet — Black and White Stix",
-        description:
-          "Tiritas de hígado y mondongo. Sin químicos ni harinas. Aptas para alimentación BARF.",
-        price: 5200,
-      },
+      { name: "Snack Pet Black Stix", description: "", price: 5000, image: `${P}/image%20(46).png` },
+      { name: "Snack Pet White Stix", description: "", price: 5000, image: `${P}/image%20(47).png` },
+      { name: "Snack Pet Black and White Stix", description: "", price: 5200, image: `${P}/image%20(48).png` },
+    ],
+  },
+  {
+    id: "sintacc",
+    label: "Sin TACC",
+    icon: Leaf,
+    color: "from-lime-300 to-green-400",
+    items: [
+      { name: "Extra Pan Sin TACC (2 rebanadas)", description: "", price: 5000, tag: "Sin TACC", image: `${P}/image%20(49).png` },
     ],
   },
   {
@@ -491,28 +217,13 @@ const categories = [
     icon: Soup,
     color: "from-pink-200 to-rose-300",
     items: [
-      {
-        name: "Vela con Glitter",
-        description: "Consultar disponibilidad de colores.",
-        price: 2000,
-      },
-      {
-        name: "Extra Tostadas x2 (Masa Madre)",
-        description:
-          "Dos unidades de tostadas de masa madre. Válido para agregar a los combos. No se venden solas.",
-        price: 4000,
-      },
-      {
-        name: "Extra Tostadas x2 (Sin TACC)",
-        description:
-          "Dos unidades de tostadas sin TACC. Válido para agregar a los combos. No se venden solas.",
-        price: 5000,
-        tag: "Sin TACC",
-      },
-      { name: "Extra Chocolate Águila", description: "", price: 1500 },
-      { name: "Vela Ondas Rosa", description: "", price: 2000 },
-      { name: "Vela Ondas Plateada", description: "", price: 2000 },
-      { name: "Vela Ondas Dorada", description: "", price: 2000 },
+      { name: "Vela con Glitter", description: "", price: 2000, image: `${P}/image%20(50).png` },
+      { name: "Extra Tostadas x2", description: "", price: 4000, image: `${P}/image%20(51).png` },
+      { name: "Extra Chocolate Aguila", description: "", price: 1500, image: `${P}/image%20(52).png` },
+      { name: "Vela Ondas Rosa", description: "", price: 2000, image: `${P}/image%20(53).png` },
+      { name: "Vela Ondas Plateada", description: "", price: 2000, image: `${P}/image%20(54).png` },
+      { name: "Vela Ondas Dorada", description: "", price: 2000, image: `${P}/image%20(55).png` },
+      { name: "Medialuna Extra", description: "", price: 3500, image: `${P}/image%20(56).png` },
     ],
   },
 ];
@@ -557,10 +268,23 @@ function MenuItem({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
       transition={{ duration: 0.28, delay: index * 0.04 }}
-      className="group flex items-start gap-4 py-4 border-b border-primary/8 last:border-0 hover:bg-white/60 rounded-xl px-3 -mx-3 transition-colors duration-200 cursor-default"
+      className="group flex items-center gap-4 py-4 border-b border-primary/8 last:border-0 hover:bg-white/60 rounded-xl px-3 -mx-3 transition-colors duration-200 cursor-default"
     >
+      {/* Thumbnail */}
+      {item.image && (
+        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden shrink-0 shadow-sm border border-primary/10 bg-pink-50">
+          <img
+            src={item.image}
+            alt={item.name}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            loading="lazy"
+          />
+        </div>
+      )}
+
+      {/* Info */}
       <div className="flex-1 min-w-0">
-        <div className="flex flex-wrap items-center gap-2 mb-1">
+        <div className="flex flex-wrap items-center gap-2 mb-0.5">
           <h4 className="font-semibold text-foreground text-sm leading-snug group-hover:text-primary transition-colors duration-200">
             {item.name}
           </h4>
@@ -580,7 +304,9 @@ function MenuItem({
           </p>
         )}
       </div>
-      <span className="shrink-0 text-sm font-bold text-primary tabular-nums mt-0.5">
+
+      {/* Price */}
+      <span className="shrink-0 text-sm font-bold text-primary tabular-nums">
         {formatPrice(item.price)}
       </span>
     </motion.div>
